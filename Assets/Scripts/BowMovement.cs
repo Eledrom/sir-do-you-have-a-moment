@@ -36,17 +36,21 @@ public class BowMovement : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0, 0, newAngle);
     }
-
+    float animSpeed = 1f;
     private void Shoot()
     {
         if (Input.GetMouseButtonDown(0) && canShoot)
         {
+            animSpeed += .1f;
+
             Animator.SetBool("Shoot", true);
 
             GameObject newProjectile = Instantiate(Projectile, shootingPoint.transform.position, transform.rotation);
             newProjectile.GetComponent<Rigidbody2D>().linearVelocity = transform.up * launchForce;
 
             canShoot = false;
+
+            Animator.SetFloat("SpeedMult", animSpeed);
 
             Destroy(newProjectile, 5f);
         }

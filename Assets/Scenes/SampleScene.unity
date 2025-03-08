@@ -1219,6 +1219,8 @@ MonoBehaviour:
   Animator: {fileID: 2120448451}
   launchForce: 50
   bowSpeed: 150
+  example: {fileID: 7400000, guid: 5d4731970062f0c498d6005399889112, type: 2}
+  speedanim: 30
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
