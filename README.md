@@ -33,9 +33,13 @@ Animation department:
 
 Sound department:  
 - General music (Forget our guitar talk, make it easier... unless :eyes:)  
-- Sound for explosion.  
-- Sound for turrets.  
+- Sounds for destroyng the ads.  
+- Sound for shooting ballista.  
+- Sound for loading ballista (rope pull).  
 - Sound for level up.  
+- Sound for canon shooting.  
+- (Sound for reload canon).  
 - Sound for gaining bonus stats.  
+- Sound for shooting futuristic turret. And the reload.  
   
 Looks worse then it is. Trust.
