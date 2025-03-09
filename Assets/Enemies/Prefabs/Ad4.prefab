@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7165516240638964566}
   m_Layer: 0
   m_Name: Ad4
-  m_TagString: Untagged
+  m_TagString: 4HP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

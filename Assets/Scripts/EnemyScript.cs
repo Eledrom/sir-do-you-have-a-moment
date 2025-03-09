@@ -15,9 +15,14 @@ public class EnemyScript : MonoBehaviour
 
     private void Start()
     {
+        SpawnEnemies();
+    }
+
+    public void SpawnEnemies()
+    {
         if (enemies.Length != targetPositions.Length)
         {
-            Debug.LogError("The Enemies and Target Positions arrays must be the same length!");
+            Debug.LogError("Enemies ve Target Positions dizileri ayný uzunlukta olmalý!");
             return;
         }
 
@@ -27,10 +32,13 @@ public class EnemyScript : MonoBehaviour
 
         for (int i = 0; i < enemies.Length; i++)
         {
-            Vector3 spawnPosition = new Vector3(targetPositions[i].x + Random.Range(-1f, 1f), targetPositions[i].y + Random.Range(-1f, 1f), 0);
-            spawnedEnemies[i] = Instantiate(enemies[i], spawnPosition, Quaternion.identity);
-            startPositions[i] = targetPositions[i];
-            reachedTarget[i] = false;
+            if (ShouldSpawnEnemy(i))
+            {
+                Vector3 spawnPosition = new Vector3(targetPositions[i].x + Random.Range(-1f, 1f), targetPositions[i].y + Random.Range(-1f, 1f), 0);
+                spawnedEnemies[i] = Instantiate(enemies[i], spawnPosition, Quaternion.identity);
+                startPositions[i] = spawnPosition;
+                reachedTarget[i] = false;
+            }
         }
     }
 
@@ -40,7 +48,7 @@ public class EnemyScript : MonoBehaviour
         {
             if (spawnedEnemies[i] != null)
             {
-                if (!reachedTarget[i])
+                if (!reachedTarget[i] && spawnedEnemies[i] != null)
                 {
                     Vector3 target = new Vector3(targetPositions[i].x, targetPositions[i].y, spawnedEnemies[i].transform.position.z);
                     spawnedEnemies[i].transform.position = Vector3.MoveTowards(spawnedEnemies[i].transform.position, target, enemySpeed * Time.deltaTime);
@@ -58,5 +66,17 @@ public class EnemyScript : MonoBehaviour
                 }
             }
         }
+    }
+
+    private bool ShouldSpawnEnemy(int index)
+    {
+        if ((index == 0 || index == 1) && GameManager.Instance.isStage1)
+            return true;
+        if ((index == 2 || index == 3) && GameManager.Instance.isStage2)
+            return true;
+        if ((index == 4 || index == 5) && GameManager.Instance.isStage3)
+            return true;
+
+        return false;
     }
 }

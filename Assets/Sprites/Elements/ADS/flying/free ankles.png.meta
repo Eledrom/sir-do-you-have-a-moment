@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      free ankles_0: 4247574966050367905
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
