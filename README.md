@@ -31,7 +31,7 @@ Animation department:
 - Turret phase 3.  
 ~~- Talk about the ad variants.~~  
 - Add Stage title.  
-- Add level up for all stats.
+- Add level up for all stats.  
 
 Sound department:  
 ~~- General music (Forget our guitar talk, make it easier... unless :eyes:)~~  
