@@ -16,7 +16,7 @@ Programmer department:
 To be discussed with Aphro.  
   
 Animation department:  
-- Animation for flying ads.  
+- Animation for flying ads. CANCELED  
 ~~- Simple explosion animation.~~ ~~ Swapped to damage animation.~~  
 ~~- Transformation/level up animation.~~  
 ~~- Turret phase 2 animation.~~  
