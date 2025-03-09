@@ -18,6 +18,8 @@ public class ObjectSpawner : MonoBehaviour
 
     public GameObject gameOver;
 
+    public ParticleSystem ParticleSystem;
+
     private void Start()
     {
         StartCoroutine(Spawner());
@@ -64,7 +66,7 @@ public class ObjectSpawner : MonoBehaviour
 
     public void GameOver()
     {
-        if (objectCount > 2)
+        if (objectCount > 6)
         {
             gameOver.SetActive(true);
         }
