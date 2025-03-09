@@ -15,6 +15,8 @@ public class BackgroundsParallax : MonoBehaviour
 
     private void Update()
     {
+        speed += Time.deltaTime * .001f;
+
         distance += Time.deltaTime * speed;
         mat.SetTextureOffset("_MainTex", Vector2.up * distance);
     }

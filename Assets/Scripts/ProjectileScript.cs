@@ -21,6 +21,10 @@ public class ProjectileScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        var x = Instantiate(objectSpawner.ParticleSystem, collision.transform.position, Quaternion.identity);
+
+        x.Play();
+
         int scoreToAdd = 0;
 
         objectSpawner.objectCount--;

@@ -5,6 +5,7 @@ public class BowMovement : MonoBehaviour
     public GameObject Projectile;
     public Transform shootingPoint;
     public Animator Animator;
+    public AudioSource shootR;
 
     public float launchForce;
     public float bowSpeed;
@@ -36,12 +37,17 @@ public class BowMovement : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0, 0, newAngle);
     }
+
     float animSpeed = 1f;
     private void Shoot()
     {
         if (Input.GetMouseButtonDown(0) && canShoot)
         {
-            animSpeed += .1f;
+            // animSpeed deðerini kontrol et
+            if (animSpeed <= 3f)
+            {
+                animSpeed += .1f;
+            }
 
             Animator.SetBool("Shoot", true);
 
@@ -64,5 +70,10 @@ public class BowMovement : MonoBehaviour
     public void AnimationEventCANSHOOT()
     {
         canShoot = true;
+    }
+
+    public void ShootA()
+    {
+        shootR.Play();
     }
 }

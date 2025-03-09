@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        highScoreText.text = "High Score: " + highScore.ToString();
+        highScoreText.text = highScore.ToString();
 
         if (Input.GetKeyUp(KeyCode.Escape))
         {
@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     {
         score += amount;
 
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = score.ToString();
 
         if (score > highScore)
         {
