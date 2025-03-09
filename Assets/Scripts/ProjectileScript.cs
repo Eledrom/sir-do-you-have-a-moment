@@ -3,9 +3,27 @@ using UnityEngine.UI;
 
 public class ProjectileScript : MonoBehaviour
 {
+    private ObjectSpawner objectSpawner;
+
+    private void Awake()
+    {
+        GameObject spawnerObject = GameObject.Find("spawner");
+
+        if (spawnerObject != null)
+        {
+            objectSpawner = spawnerObject.GetComponent<ObjectSpawner>();
+        }
+        else
+        {
+            Debug.LogError("Spawner GameObject bulunamadý!");
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         int scoreToAdd = 0;
+
+        objectSpawner.objectCount--;
 
         if (collision.gameObject.CompareTag("1HP"))
         {
