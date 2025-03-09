@@ -556,7 +556,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &550366182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1067,6 +1067,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1972983616}
+  - component: {fileID: 1972983617}
   m_Layer: 0
   m_Name: --------------
   m_TagString: Untagged
@@ -1083,12 +1084,42 @@ Transform:
   m_GameObject: {fileID: 1972983615}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0146922, y: 4.9660463, z: -0.03963919}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1972983617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972983615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9400a9a5216684e952dfabfc2c8f9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 3966507503967611358, guid: 7476ea0a53490d9488c156530c6e4ec8, type: 3}
+  - {fileID: 1958879429818948184, guid: 678c57cc4efef6a4297ea821b6396ebc, type: 3}
+  - {fileID: 2730668471194112927, guid: 5d1e4689fab241f4d9ab322d2b7fda83, type: 3}
+  - {fileID: 7676594638463908566, guid: 38494a004b097ea40a16ec22c6542037, type: 3}
+  - {fileID: 5846696902583354939, guid: 191ddbdf7ee60f145a9e164df367afd8, type: 3}
+  - {fileID: 3527716822557273779, guid: e68aa02bd2ec29344b661f91c8b22ab8, type: 3}
+  targetPositions:
+  - {x: 2, y: 1}
+  - {x: -1, y: 2}
+  - {x: -2, y: 3}
+  - {x: -1, y: 1}
+  - {x: -2, y: 3}
+  - {x: -1, y: 2}
+  enemySpeed: 2
+  moveRangeX: 0.5
+  moveRangeY: 0.5
+  moveSpeed: 1
 --- !u!1 &2120448448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1219,8 +1250,6 @@ MonoBehaviour:
   Animator: {fileID: 2120448451}
   launchForce: 50
   bowSpeed: 150
-  example: {fileID: 7400000, guid: 5d4731970062f0c498d6005399889112, type: 2}
-  speedanim: 30
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
