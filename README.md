@@ -17,29 +17,32 @@ To be discussed with Aphro.
   
 Animation department:  
 - Animation for flying ads.  
-- Simple explosion animation.  
-- Transformation/level up animation. 
-- Turret phase 2 animation.  
+~~- Simple explosion animation.~~ ~~ Swapped to damage animation.~~  
+~~- Transformation/level up animation.~~  
+~~- Turret phase 2 animation.~~  
 - Turret phase 3 animation.  
 - (optional: Fire animation for funs and giggles if there is time left).  
 - (optional: Minor idle animation).  
 
 2D department:  
 - More ads!  
-- Around 5 Points of interest. Make our life easier with same buildings, but different colour variation.  
-- Turret phase 2.  
+~~- Around 4 Points of interest. Make our life easier with same buildings, but different colour variation.~~  
+~~- Turret phase 2.~~  
 - Turret phase 3.  
-- Talk about the ad variants.  
+~~- Talk about the ad variants.~~  
+- Add Stage title.  
+- Add level up for all stats.
 
 Sound department:  
-- General music (Forget our guitar talk, make it easier... unless :eyes:)  
+~~- General music (Forget our guitar talk, make it easier... unless :eyes:)~~  
 - Sounds for destroyng the ads.  
-- Sound for shooting ballista.  
-- Sound for loading ballista (rope pull).  
-- Sound for level up.  
-- Sound for canon shooting.  
-- (Sound for reload canon).  
-- Sound for gaining bonus stats.  
+~~- Sound for shooting ballista.~~  
+~~- Sound for loading ballista (rope pull).~~  
+~~- Sound for level up.~~  
+~~- Sound for canon shooting.~~  
+~~- (Sound for reload canon).~~  
+~~- Sound for gaining bonus stats.~~  
 - Sound for shooting futuristic turret. And the reload.  
   
 Looks worse then it is. Trust.
+Update: HELL YEAH WE ARE DOING IT!!!1!11!
