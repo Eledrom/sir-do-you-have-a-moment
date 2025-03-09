@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObjectSpawner : MonoBehaviour
 {
@@ -8,14 +9,27 @@ public class ObjectSpawner : MonoBehaviour
     public float minThreshold;
     public float maxThreshold;
 
-    public float moveSpeedX = 1f; // X ekseninde hareket hýzý
-    public float moveSpeedY = 1f; // Y ekseninde hareket hýzý
-    public float moveRangeX = 5f; // X eksenindeki hareket aralýðý
-    public float moveRangeY = 3f; // Y eksenindeki hareket aralýðý
+    public float moveSpeedX = 1f;
+    public float moveSpeedY = 1f;
+    public float moveRangeX = 5f;
+    public float moveRangeY = 3f;
+
+    public int objectCount;
+
+    public GameObject gameOver;
 
     private void Start()
     {
         StartCoroutine(Spawner());
+    }
+
+    private void Update()
+    {
+        spawnRatio -= Time.deltaTime / 15;
+
+        Debug.Log(objectCount);
+
+        GameOver();
     }
 
     IEnumerator Spawner()
@@ -26,16 +40,12 @@ public class ObjectSpawner : MonoBehaviour
             var position = new Vector3(threshold, transform.position.y);
             GameObject gameObject = Instantiate(objects[Random.Range(0, objects.Length)], position, Quaternion.identity);
 
-            // Baþlangýç konumunu sakla
             Vector3 startPosition = gameObject.transform.position;
 
-            // Objelerin hareketini her frame kontrol et
             StartCoroutine(MoveObject(gameObject, startPosition));
 
-            // Objeyi 5 saniye sonra yok et
-            Destroy(gameObject, 5f);
+            objectCount++;
 
-            // Yeni obje spawnlanmadan önce bekleme süresi
             yield return new WaitForSeconds(spawnRatio);
         }
     }
@@ -50,5 +60,23 @@ public class ObjectSpawner : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    public void GameOver()
+    {
+        if (objectCount > 2)
+        {
+            gameOver.SetActive(true);
+        }
+    }
+
+    public void TryAgain()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
