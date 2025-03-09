@@ -909,8 +909,8 @@ Transform:
   m_GameObject: {fileID: 1747328136}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.0146922, y: -1.9660463, z: 0.03963919}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.01, y: 11.59, z: 0.0396}
+  m_LocalScale: {x: 1.0403782, y: 1.0403782, z: 1.0403782}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 486453041}
@@ -959,7 +959,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 5240242160703981441, guid: fd52f94bea03be2469852c0b9e076b3f, type: 3}
+  m_Sprite: {fileID: -2440337419345330257, guid: 649c09e765627de4dad7d3259a33c45d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1111,11 +1111,11 @@ MonoBehaviour:
   - {fileID: 3527716822557273779, guid: e68aa02bd2ec29344b661f91c8b22ab8, type: 3}
   targetPositions:
   - {x: 2, y: 1}
-  - {x: -1, y: 2}
-  - {x: -2, y: 3}
+  - {x: 1.5, y: 4}
+  - {x: -3, y: 3}
   - {x: -1, y: 1}
-  - {x: -2, y: 3}
-  - {x: -1, y: 2}
+  - {x: -2, y: 3.5}
+  - {x: -0.5, y: 1.5}
   enemySpeed: 2
   moveRangeX: 0.5
   moveRangeY: 0.5
